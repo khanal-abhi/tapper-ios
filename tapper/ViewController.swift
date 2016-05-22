@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var appsToWin: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,16 +24,16 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "from_main_to_game"){
             let gameViewController = segue.destinationViewController as! GameViewController
-            if(true){
-                gameViewController.passedInt = 2;
+            if(appsToWin != nil){
+                gameViewController.passedInt = Int(appsToWin.text!)
+            } else {
+                gameViewController.passedInt = 10
             }
         }
     }
     
-    func goToGame(){
+    @IBAction func playGame(sender: AnyObject) {
         self.performSegueWithIdentifier("from_main_to_game", sender: self)
     }
-
-
 }
 
