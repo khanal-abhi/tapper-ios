@@ -19,6 +19,19 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "from_main_to_game"){
+            let gameViewController = segue.destinationViewController as! GameViewController
+            if(true){
+                gameViewController.passedInt = 2;
+            }
+        }
+    }
+    
+    func goToGame(){
+        self.performSegueWithIdentifier("from_main_to_game", sender: self)
+    }
 
 
 }

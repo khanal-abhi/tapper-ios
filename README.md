@@ -15,5 +15,5 @@ Tapper is one of the first apps that I will be building for iOS using swift. The
 
 [1]:http://www.freepik.com/free-vector/picking-the-right-one_764838.htm "Designed by Freepik"
 [2]:http://www.freepik.com/free-vector/keep-calm-and-create-poster_716072.htm "Designed by Freepik"
-[splash_screen]:/img/splash_screen.png "Splash Screen"
-[menu_screen]:/img/menu_screen.png "Menu Screen"
+[splash_screen]:/img/splash_screen.png "Splash Screen" {:width=200px}
+[menu_screen]:/img/menu_screen.png "Menu Screen" {:width=200px}
