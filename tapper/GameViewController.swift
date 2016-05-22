@@ -52,4 +52,12 @@ class GameViewController: UIViewController {
         score.text = "Score: \(scoreInt)"
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "from_game_to_main"){
+            let viewController = segue.destinationViewController as! ViewController
+            viewController.lastScore = scoreInt
+            viewController.lastTaps = passedInt
+        }
+    }
+    
 }

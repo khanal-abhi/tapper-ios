@@ -11,9 +11,26 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var appsToWin: UITextField!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var tapsLabel: UILabel!
+    
+    var lastScore: Int!
+    var lastTaps: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if(lastScore == nil){
+            lastScore = 0
+        }
+        
+        if(lastTaps == nil){
+            lastTaps = 10
+        }
+        
+        scoreLabel.text = "Last Score: \(lastScore)"
+        tapsLabel.text = "Last Taps: \(lastTaps)"
+        
     }
 
     override func didReceiveMemoryWarning() {
