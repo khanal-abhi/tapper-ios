@@ -4,15 +4,16 @@ Tapper is one of the first apps that I will be building for iOS using swift. The
 
 ###Screenshots:
 ![Splash Screen][splash_screen]
+![Menu Screen][menu_screen]
 
 ###Attribution:
 
 [Load Screen Logo][1]
+
 [Menu Screen Logo][2]
-[Game Screen Logo][3]
 
 
 [1]:http://www.freepik.com/free-vector/picking-the-right-one_764838.htm "Designed by Freepik"
 [2]:http://www.freepik.com/free-vector/keep-calm-and-create-poster_716072.htm "Designed by Freepik"
-[3]:/# ""
 [splash_screen]:/img/splash_screen.png "Splash Screen"
+[menu_screen]:/img/menu_screen.png "Menu Screen"
