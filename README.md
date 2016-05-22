@@ -5,6 +5,7 @@ Tapper is one of the first apps that I will be building for iOS using swift. The
 ###Screenshots:
 <img src="img/splash_screen.png" width="200" />
 <img src="img/menu_screen.png" width="200" />
+<img src="img/play_screen.png" width="200" />
 
 ###Attribution:
 
