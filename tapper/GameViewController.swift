@@ -11,11 +11,13 @@ import UIKit
 class GameViewController: UIViewController {
     
     @IBOutlet weak var tapsCounter: UILabel!
+    @IBOutlet weak var score: UILabel!
     @IBOutlet weak var tapButton: UIButton!
     
     
     var passedInt: Int!
     var taps: Int!
+    var scoreInt: Int = 1000000
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,10 @@ class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     @IBAction func tapped(sender: AnyObject) {
+        
+        if(scoreInt == 1000000){
+            NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(GameViewController.decrementScore), userInfo: nil, repeats: true)
+        }
         
         if(passedInt == nil){
             passedInt = 10
@@ -39,9 +45,11 @@ class GameViewController: UIViewController {
             self.performSegueWithIdentifier("from_game_to_main", sender: self)
         }
         
-        
-        
     }
     
+    func decrementScore(){
+        scoreInt = scoreInt - 100;
+        score.text = "Score: \(scoreInt)"
+    }
     
 }

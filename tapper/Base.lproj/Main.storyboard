@@ -113,12 +113,23 @@
                                     <action selector="tapped:" destination="IBj-d9-L0X" eventType="touchUpInside" id="MgE-xS-duQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 1000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGE-7T-hHx">
+                                <rect key="frame" x="75" y="109" width="450" height="29"/>
+                                <color key="backgroundColor" red="0.40976767019999999" green="0.34529174940000001" blue="0.33451897879999998" alpha="0.95994015960000001" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.1000445967" blue="0.7961144336" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="EGE-7T-hHx" firstAttribute="top" secondItem="iEC-eD-kau" secondAttribute="bottom" constant="20" id="1Vo-Rc-Bau"/>
                             <constraint firstItem="ds6-31-d7u" firstAttribute="top" secondItem="2W6-BY-Vga" secondAttribute="bottom" id="1Xw-EQ-d0Y"/>
                             <constraint firstItem="iEC-eD-kau" firstAttribute="width" secondItem="Is3-Kf-wPF" secondAttribute="width" multiplier="0.75" id="2ii-kf-PmN"/>
                             <constraint firstItem="2W6-BY-Vga" firstAttribute="top" secondItem="n1g-jc-iBJ" secondAttribute="bottom" id="75A-OF-ibN"/>
+                            <constraint firstItem="EGE-7T-hHx" firstAttribute="width" secondItem="iEC-eD-kau" secondAttribute="width" id="JlD-0I-2Z2"/>
+                            <constraint firstItem="EGE-7T-hHx" firstAttribute="top" secondItem="iEC-eD-kau" secondAttribute="bottom" constant="20" id="KAG-f2-vkp"/>
+                            <constraint firstItem="EGE-7T-hHx" firstAttribute="centerX" secondItem="Is3-Kf-wPF" secondAttribute="centerX" id="Lnf-rL-oqO"/>
                             <constraint firstItem="J9E-Cc-8jO" firstAttribute="centerX" secondItem="Is3-Kf-wPF" secondAttribute="centerX" id="UZh-fp-lVG"/>
                             <constraint firstItem="iEC-eD-kau" firstAttribute="centerX" secondItem="Is3-Kf-wPF" secondAttribute="centerX" id="dSR-Un-cfZ"/>
                             <constraint firstItem="ds6-31-d7u" firstAttribute="top" secondItem="J9E-Cc-8jO" secondAttribute="bottom" constant="20" id="odt-Cn-qec"/>
@@ -127,8 +138,14 @@
                             <constraint firstItem="2W6-BY-Vga" firstAttribute="leading" secondItem="Is3-Kf-wPF" secondAttribute="leadingMargin" id="t8F-eL-p0k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2W6-BY-Vga" secondAttribute="trailing" id="wok-rO-D9N"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1Vo-Rc-Bau"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="score" destination="EGE-7T-hHx" id="HEM-jR-HS1"/>
                         <outlet property="tapButton" destination="J9E-Cc-8jO" id="47N-aU-8CF"/>
                         <outlet property="tapsCounter" destination="iEC-eD-kau" id="LtG-iv-GKg"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="from_game_to_main" id="kMl-bC-osN"/>
