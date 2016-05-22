@@ -42,7 +42,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win? (10)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ggc-68-QIf">
                                 <rect key="frame" x="150" y="434" width="300" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309" y="363"/>
+            <point key="canvasLocation" x="427" y="373"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="xdm-m8-S2L">
@@ -104,11 +104,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9E-Cc-8jO">
-                                <rect key="frame" x="201" y="441.5" width="198" height="91.5"/>
+                                <rect key="frame" x="180" y="469" width="240" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="J9E-Cc-8jO" secondAttribute="height" multiplier="13:6" id="hRo-PU-edW"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="TAP"/>
+                                <connections>
+                                    <action selector="tapped:" destination="IBj-d9-L0X" eventType="touchUpInside" id="MgE-xS-duQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,13 +121,18 @@
                             <constraint firstItem="2W6-BY-Vga" firstAttribute="top" secondItem="n1g-jc-iBJ" secondAttribute="bottom" id="75A-OF-ibN"/>
                             <constraint firstItem="J9E-Cc-8jO" firstAttribute="centerX" secondItem="Is3-Kf-wPF" secondAttribute="centerX" id="UZh-fp-lVG"/>
                             <constraint firstItem="iEC-eD-kau" firstAttribute="centerX" secondItem="Is3-Kf-wPF" secondAttribute="centerX" id="dSR-Un-cfZ"/>
-                            <constraint firstItem="ds6-31-d7u" firstAttribute="top" secondItem="J9E-Cc-8jO" secondAttribute="bottom" constant="67" id="odt-Cn-qec"/>
+                            <constraint firstItem="ds6-31-d7u" firstAttribute="top" secondItem="J9E-Cc-8jO" secondAttribute="bottom" constant="20" id="odt-Cn-qec"/>
                             <constraint firstItem="iEC-eD-kau" firstAttribute="top" secondItem="n1g-jc-iBJ" secondAttribute="bottom" constant="40" id="pEn-O1-RWf"/>
-                            <constraint firstItem="J9E-Cc-8jO" firstAttribute="width" secondItem="Is3-Kf-wPF" secondAttribute="width" multiplier="0.33" id="qWa-dc-dko"/>
+                            <constraint firstItem="J9E-Cc-8jO" firstAttribute="width" secondItem="Is3-Kf-wPF" secondAttribute="width" multiplier="0.4" id="qWa-dc-dko"/>
                             <constraint firstItem="2W6-BY-Vga" firstAttribute="leading" secondItem="Is3-Kf-wPF" secondAttribute="leadingMargin" id="t8F-eL-p0k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2W6-BY-Vga" secondAttribute="trailing" id="wok-rO-D9N"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tapButton" destination="J9E-Cc-8jO" id="47N-aU-8CF"/>
+                        <outlet property="tapsCounter" destination="iEC-eD-kau" id="LtG-iv-GKg"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="from_game_to_main" id="kMl-bC-osN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIe-zJ-c23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

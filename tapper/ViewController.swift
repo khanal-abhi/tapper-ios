@@ -24,11 +24,9 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "from_main_to_game"){
             let gameViewController = segue.destinationViewController as! GameViewController
-            if(appsToWin != nil){
+            if(appsToWin.text! != ""){
                 gameViewController.passedInt = Int(appsToWin.text!)
-            } else {
-                gameViewController.passedInt = 10
-            }
+            } 
         }
     }
     
